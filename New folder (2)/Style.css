@@ -1,0 +1,32 @@
+:root{
+  --primary-colo: brown;
+  --secondary-color: red;
+}
+
+div{
+  height: 250px;
+  width: 250px;
+}
+
+#div1{
+  background-color: green;
+  background-color: var(--primary-color,green);
+  position: absolute;
+  z-index: 2;
+}
+
+#div2{
+  background-color: red;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px){
+  :root{
+    --primary-color: blue;
+    --secondary-color: yellow;
+  }
+}
